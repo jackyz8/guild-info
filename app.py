@@ -301,32 +301,26 @@ def get_clan_info():
         # FINAL RESPONSE
         # =========================
         return jsonify({
-            "clan_id": getattr(resp, "id", clan_id),
-            "clan_name": getattr(resp, "special_code", None),
+    "clan_id": getattr(resp, "id", clan_id),
+    "clan_name": getattr(resp, "special_code", None),
 
-            "created_at": ts(getattr(resp, "timestamp1", 0)),
-            "updated_at": ts(getattr(resp, "timestamp2", 0)),
-            "last_active": ts(getattr(resp, "last_active", 0)),
+    "created_at": ts(getattr(resp, "timestamp1", 0)),
+    "updated_at": ts(getattr(resp, "timestamp2", 0)),
+    "last_active": ts(getattr(resp, "last_active", 0)),
 
-            "level": getattr(resp, "rank", None),
-            "region": getattr(resp, "region", region),
+    "level": getattr(resp, "rank", None),
+    "region": getattr(resp, "region", region),
 
-            "welcome_message": getattr(resp, "welcome_message", None),
-            "score": getattr(resp, "score", 0),
-            "xp": getattr(resp, "xp", 0),
-            
-            "Api Owner": "@STAR_GMR",
-            "TG CHHANEL": "@STAR_METHODE",
-            
-            "status": "success",
-            "requested_region": region
-        })
-
-    except Exception as e:
-        return jsonify({
-            "error": "Server error",
-            "details": str(e)
-        }), 500
+    "welcome_message": getattr(resp, "welcome_message", None),
+    "score": getattr(resp, "score", 0),
+    "xp": getattr(resp, "xp", 0),
+    
+    "Api Owner": "@STAR_GMR",
+    "TG CHHANEL": "@STAR_METHODE",
+    
+    "status": "success",
+    "requested_region": region
+}) 500
         
 
 # ===================== HEALTH CHECK =====================
