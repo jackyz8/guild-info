@@ -306,7 +306,7 @@ def get_clan_info():
     "level": getattr(resp, "rank", None),
     "region": getattr(resp, "region", region),
     "status": "success"
-}) 500
+}), 200
         
 
 # ===================== HEALTH CHECK =====================
